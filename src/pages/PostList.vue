@@ -21,7 +21,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'AppMain',
+    name: 'PostList',
     data(){
         return{
             posts: [],
