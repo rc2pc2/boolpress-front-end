@@ -1,16 +1,20 @@
 <template lang="">
     <div>
-        <img :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
         <div class="card-body">
-            <h5 class="card-title">
+            <h1 class="card-title mb-3">
                 {{ title }}
-            </h5>
+            </h1>
+
+
+            <img v-if="image" :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
+
             <p class="card-text" v-if="fullLength">
                 {{ content }}
             </p>
             <p v-else>
                 {{ content.substring(0, 120) }}...
             </p>
+
 
             <div class="w-100 d-flex mb-3" v-if="linkRoute">
                 <router-link :to="linkRoute" class="btn btn-primary">
@@ -37,7 +41,7 @@ export default {
             type: String,
         },
         image: {
-            required: true,
+            required: false,
             type: String,
         },
         linkRoute: {
@@ -56,9 +60,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+    img{
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 3rem;
+    }
+
     img.image-preview{
         height: 200px;
-        object-fit: cover;
-        margin-bottom: 2rem;
     }
 </style>

@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomePage from './pages/HomePage.vue';
 import PostList from './pages/PostList.vue';
+import PostSearch from './pages/PostSearch.vue';
+import PostSearchEager from './pages/PostSearchEager.vue';
 import NotFound from './pages/NotFound.vue';
 import SinglePost from './pages/SinglePost.vue';
 import CategoriesList from './pages/CategoriesList.vue';
@@ -18,6 +20,16 @@ const router = createRouter({
             path: '/posts',
             name: 'posts',
             component: PostList
+        },
+        {
+            path: '/posts-search',
+            name: 'posts-search',
+            component: PostSearch
+        },
+        {
+            path: '/posts-search-eager',
+            name: 'posts-search-eager',
+            component: PostSearchEager
         },
         {
             path: '/posts/:id',

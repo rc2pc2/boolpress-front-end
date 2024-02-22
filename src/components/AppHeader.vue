@@ -35,6 +35,14 @@ export default {
                 {
                     label: 'Categories',
                     routeName: 'categories'
+                },
+                {
+                    label: 'Lazy Posts Search',
+                    routeName: 'posts-search'
+                },
+                {
+                    label: 'Eager Posts Search',
+                    routeName: 'posts-search-eager'
                 }
             ]
         }
